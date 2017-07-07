@@ -13,7 +13,7 @@ namespace ThatsMyBand.Controllers
         {
             var RestClient = new RestClientService("http://thatsmybandrest.azurewebsites.net/");
 
-            string result = RestClient.MakeRequest("api/Band");            
+            string result = RestClient.MakeRequest("api/Band");   
 
             return View();
         }

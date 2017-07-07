@@ -5,23 +5,18 @@ using System.Text;
 namespace ThatsMyBandInfrastructure
 {
     /// <summary>
-    /// Groupe de musique
+    /// Utilisateur de l'application (Id FB)
     /// </summary>
-    public class Band
+    public class User
     {
         /// <summary>
-        /// Id du Groupe
+        /// Id de l'utilisateur
         /// </summary>
         public Guid Id { get; set; }
 
         /// <summary>
-        /// Nom du Groupe
+        /// Groupes dont dispose l'utilisateur
         /// </summary>
-        public string Name { get; set; }
-
-        /// <summary>
-        /// Joueurs du Groupe
-        /// </summary>
-        public List<Player> PlayerList { get; set; }
+        public List<Band> BandList { get; set; }
     }
 }
