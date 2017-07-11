@@ -18,5 +18,10 @@ namespace ThatsMyBandInfrastructure
         /// Nom du Joueur
         /// </summary>
         public string Name { get; set; }
+
+        /// <summary>
+        /// Instrument maîtrisé par le joueur
+        /// </summary>
+        public  InstrumentEnum Instrument { get; set; }
     }
 }

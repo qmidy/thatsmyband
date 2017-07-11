@@ -222,6 +222,10 @@
       <Project>{b351f8ff-727e-4d00-b5c8-7ee0de85b052}</Project>
       <Name>RestClient</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ThatsMyBandInfrastructure\ThatsMyBandInfrastructure.csproj">
+      <Project>{a8464793-ea69-44cc-8665-fa4711544661}</Project>
+      <Name>ThatsMyBandInfrastructure</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

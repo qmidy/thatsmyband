@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -22,6 +23,6 @@ namespace ThatsMyBandInfrastructure
         /// <summary>
         /// Joueurs du Groupe
         /// </summary>
-        public List<Player> PlayerList { get; set; }
+        public PlayerArray PlayerList { get; set; }
     }
 }
