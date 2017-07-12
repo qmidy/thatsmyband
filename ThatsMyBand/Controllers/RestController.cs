@@ -2,6 +2,7 @@
 using RestClient;
 using System.Collections.Generic;
 using System.Web.Mvc;
+using ThatsMyBand.Models;
 using ThatsMyBandInfrastructure;
 
 namespace ThatsMyBand.Controllers
@@ -10,16 +11,17 @@ namespace ThatsMyBand.Controllers
     {
         #region Public Properties
 
-        private Band _band;
-        public Band Band {
+        private BandModel _bandModel;
+        public BandModel BandModel
+        {
             get
             {
-                return _band;
+                return _bandModel;
             }
             set
             {
-                if (value != _band)
-                    _band = value;
+                if(value != _bandModel)
+                    _bandModel = value;
             }
         }
 
@@ -33,7 +35,9 @@ namespace ThatsMyBand.Controllers
 
             var bands = JsonConvert.DeserializeObject<List<Band>>(result);
 
-            return View();
+            _bandModel = new BandModel() { Band = bands[0] };
+
+            return View(_bandModel);
         }
     }
 }
