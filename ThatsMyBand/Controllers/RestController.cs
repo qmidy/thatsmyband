@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using RestClient;
+using System.Collections.Generic;
 using System.Web.Mvc;
 using ThatsMyBandInfrastructure;
 
@@ -30,7 +31,7 @@ namespace ThatsMyBand.Controllers
 
             string result = RestClient.MakeRequest("api/Band");
 
-            var Band = JsonConvert.DeserializeObject<Band>(result);
+            var bands = JsonConvert.DeserializeObject<List<Band>>(result);
 
             return View();
         }

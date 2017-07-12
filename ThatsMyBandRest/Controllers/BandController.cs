@@ -20,9 +20,9 @@ namespace ThatsMyBandRest.Controllers
             players.Add(new Player() { Name = "Adrien", Instrument = InstrumentEnum.Bass | InstrumentEnum.Vocals });
             players.Add(new Player() { Name = "Quentin", Instrument = InstrumentEnum.Guitar | InstrumentEnum.Vocals });
 
-            Band band = new Band() { Name = "Band Test", PlayerList = new PlayerArray { Players = players } };
+            Band band = new Band() { Name = "Band Test", Players = players };
 
-            return new Band[] { band };
+            return new List<Band> { band };
         }
     }
 }

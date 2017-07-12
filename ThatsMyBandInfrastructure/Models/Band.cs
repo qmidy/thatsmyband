@@ -8,21 +8,25 @@ namespace ThatsMyBandInfrastructure
     /// <summary>
     /// Groupe de musique
     /// </summary>
+    [JsonObject]
     public class Band
     {
         /// <summary>
         /// Id du Groupe
         /// </summary>
+        [JsonProperty("id")]
         public Guid Id { get; set; }
 
         /// <summary>
         /// Nom du Groupe
         /// </summary>
+        [JsonProperty("name")]
         public string Name { get; set; }
 
         /// <summary>
         /// Joueurs du Groupe
         /// </summary>
-        public PlayerArray PlayerList { get; set; }
+        [JsonProperty("players")]
+        public List<Player> Players { get; set; }
     }
 }
