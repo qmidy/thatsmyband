@@ -7,7 +7,7 @@ namespace ThatsMyBandInfrastructure
     /// <summary>
     /// Enum en multiple binaire car un musicien peut maîtriser plusieurs instruments
     /// </summary>
-    public enum InstrumentEnum
+    public enum RolesEnum
     {
         None = 0,
         Vocals = 2,

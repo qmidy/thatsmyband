@@ -18,6 +18,12 @@ namespace ThatsMyBandInfrastructure
         public Guid Id { get; set; }
 
         /// <summary>
+        /// Argent dont dispose l'utilisateur
+        /// </summary>
+        [JsonProperty("cash")]
+        public double Cash { get; set; }
+
+        /// <summary>
         /// Groupes dont dispose l'utilisateur
         /// </summary>
         [JsonProperty("bands")]

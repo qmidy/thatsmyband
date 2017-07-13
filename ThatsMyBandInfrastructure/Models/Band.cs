@@ -24,6 +24,12 @@ namespace ThatsMyBandInfrastructure
         public string Name { get; set; }
 
         /// <summary>
+        /// Reputation du Groupe
+        /// </summary>
+        [JsonProperty("fame")]
+        public double Fame { get; set; }
+
+        /// <summary>
         /// Joueurs du Groupe
         /// </summary>
         [JsonProperty("players")]

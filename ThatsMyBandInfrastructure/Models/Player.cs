@@ -24,9 +24,53 @@ namespace ThatsMyBandInfrastructure
         public string Name { get; set; }
 
         /// <summary>
-        /// Instrument maîtrisé par le joueur
+        /// Talent du joueur / Aptitude à apprendre rapidement
+        /// </summary>
+        [JsonProperty("talent")]
+        public double Talent { get; set; }
+
+        /// <summary>
+        /// Experience dont dispose le joueur
+        /// </summary>
+        [JsonProperty("experience")]
+        public double Experience { get; set; }
+
+        /// <summary>
+        /// Instruments joués par le joueur
         /// </summary>
         [JsonProperty("instrument")]
-        public  InstrumentEnum Instrument { get; set; }
+        public  RolesEnum Role { get; set; }
+
+        #region Skills
+        /// <summary>
+        /// Décrit le niveau à la basse
+        /// </summary>
+        [JsonProperty("bassskill")]
+        public double BassSkill { get; set; }
+
+        /// <summary>
+        /// Décrit le niveau de coordination, la faculté de jouer deux instruments à la fois
+        /// </summary>
+        [JsonProperty("coordinationskill")]
+        public double CoordinationSkill { get; set; }
+
+        /// <summary>
+        /// Décrit le niveau à la batterie
+        /// </summary>
+        [JsonProperty("drumsskill")]
+        public double DrumsSkill { get; set; }
+
+        /// <summary>
+        /// Décrit le niveau à la guitare
+        /// </summary>
+        [JsonProperty("guitarskill")]
+        public double GuitarSkill { get; set; }
+
+        /// <summary>
+        /// Décrit le niveau au chant
+        /// </summary>
+        [JsonProperty("vocalsskill")]
+        public double VocalsSkill { get; set; }
+        #endregion
     }
 }
