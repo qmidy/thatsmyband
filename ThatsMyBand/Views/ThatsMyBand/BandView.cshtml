@@ -1,0 +1,13 @@
+﻿<!DOCTYPE html>
+
+    Band : <br />
+    Name : @Model.Name <br />
+    Fame : @Model.Fame <br />
+
+    Players : <br />
+    @{
+        foreach (var player in @Model.Players)
+        {
+            @player.Name;
+        }
+    }

@@ -16,5 +16,13 @@ namespace ThatsMyBandRest.Controllers
         {
             return new Player[] { new Player { Name = "Name1" } };
         }
+
+        [HttpGet("{id}")]
+        public Player Get(string id)
+        {
+            Player result = new Player() { Name = "Jo", Talent = 99, VocalsSkill = 30, DrumsSkill = 50, Role = RolesEnum.Drums | RolesEnum.Vocals };
+
+            return result;
+        }
     }
 }
