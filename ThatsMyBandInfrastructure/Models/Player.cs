@@ -36,6 +36,12 @@ namespace ThatsMyBandInfrastructure
         public double Experience { get; set; }
 
         /// <summary>
+        /// Equipement du musicien
+        /// </summary>
+        [JsonProperty("equipment")]
+        public Equipment Equipment { get; set; }
+
+        /// <summary>
         /// Instruments joués par le joueur
         /// </summary>
         [JsonProperty("instrument")]

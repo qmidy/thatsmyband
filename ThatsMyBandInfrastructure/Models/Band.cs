@@ -30,9 +30,21 @@ namespace ThatsMyBandInfrastructure
         public double Fame { get; set; }
 
         /// <summary>
+        /// Calendrier du groupe
+        /// </summary>
+        [JsonProperty("schedule")]
+        public Schedule Schedule { get; set; }
+
+        /// <summary>
         /// Joueurs du Groupe
         /// </summary>
         [JsonProperty("players")]
         public List<Player> Players { get; set; }
+
+        /// <summary>
+        /// Productions sorties par le groupe
+        /// </summary>
+        [JsonProperty("releases")]
+        public List<Release> Releases { get; set; }
     }
 }
