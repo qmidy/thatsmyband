@@ -50,7 +50,7 @@ namespace ThatsMyBandRest.Controllers
             Band band = new Band() { Name = "Band Test", Fame = 52, Players = players, Schedule = schedule, Releases = releases};
 
             // Création du User
-            result.Bands = new List<Band>() { band };
+            result.Band = band;
             result.Cash = 100;
 
             return result;

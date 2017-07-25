@@ -10,14 +10,6 @@
     Cash : @Model.Cash <br/>
 
     Band : <br/>
-    Name : @Model.Bands[0].Name <br />
-    Fame : @Model.Bands[0].Fame <br />
-
-    Players : <br />
-    @{ 
-        foreach(var player in @Model.Bands[0].Players)
-        {
-            @player.Name; 
-        }
-    }
+    Name : @Model.Band.Name <br />
+    Fame : @Model.Band.Fame <br />
  </p>

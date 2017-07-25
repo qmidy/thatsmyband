@@ -26,7 +26,7 @@ namespace ThatsMyBandInfrastructure
         /// <summary>
         /// Groupes dont dispose l'utilisateur
         /// </summary>
-        [JsonProperty("bands")]
-        public List<Band> Bands { get; set; }
+        [JsonProperty("band")]
+        public Band Band { get; set; }
     }
 }

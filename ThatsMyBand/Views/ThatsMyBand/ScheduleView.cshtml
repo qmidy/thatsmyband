@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<!-- Vue représentant la vue Schedule qui permet de gérer le calendrier du groupe -->
+<!-- Conteneur du bandeau-->
+<div class="container">
+    <div class="row">
+        <div class="col-xs-3">@Model.Band.Name</div>
+        <div class="col-xs-offset-3 col-xs-3">@Model.Band.Fame</div>
+        <div class="col-xs-offset-3 col-xs-3">@Model.Cash</div>
+    </div>
+</div>
+
+<!-- Conteneur du Calendrier -->
+<div class="container">
+    <div id="scheduleCalendar" class="row">
+        
+    </div>
+</div>
+
+<!-- Script de construction du calendrier -->
+<script type="text/javascript" src="../../Scripts/js/schedule.js"> </script>
+<script type="text/javascript">
+    document.ready(buildSchedule(@Html.Raw(Json.Encode(Model.Band.Schedule.ScheduleEvents)), "scheduleCalendar"));
+</script>

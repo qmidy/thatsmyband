@@ -42,9 +42,15 @@ namespace ThatsMyBand.Controllers
         /// Renvoie la vue Plateau, là où le joueur effectue ses actions
         /// </summary>
         /// <returns></returns>
-        public ActionResult BoardView()
+        public ActionResult ScheduleView()
         {
-            return View();
+            var RestClient = new RestClientService("http://thatsmybandrest.azurewebsites.net/");
+
+            string result = RestClient.MakeRequest("api/User/5");
+
+            var user = JsonConvert.DeserializeObject<User>(result);
+
+            return View(user);
         }
 
         /// <summary>
